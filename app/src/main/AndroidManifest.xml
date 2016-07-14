@@ -6,13 +6,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="KING MOD"
         android:theme="@style/Theme.Transparent"
 
          >
         <activity
             android:name=".MainViewActivity"
-            android:label="@string/app_name"
+            android:label="KING MOD"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

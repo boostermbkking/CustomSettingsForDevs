@@ -36,7 +36,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.software.shell.fab.ActionButton;
 import com.stericson.RootShell.exceptions.RootDeniedException;
@@ -97,6 +96,7 @@ public class MainViewActivity extends AppCompatActivity
         int[] mIcons = {R.drawable.ic_ui_mods,
                 R.drawable.ic_phone_mods,
                 R.drawable.ic_general_framework,
+                R.drawable.ic_reboot,
                 R.drawable.ic_apps,
                 R.drawable.ic_settings};
         for (int i = 0; i < mTitles.length && i < mIcons.length; i++) {
@@ -126,9 +126,12 @@ public class MainViewActivity extends AppCompatActivity
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new FrameworksGeneralFragment()).commitAllowingStateLoss();
                 break;
             case 3:
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AppLinksFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PowerMenuFragment()).commitAllowingStateLoss();
                 break;
             case 4:
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AppLinksFragment()).commitAllowingStateLoss();
+                break;
+            case 5:
                 showThemeChooserDialog();
                 break;
 

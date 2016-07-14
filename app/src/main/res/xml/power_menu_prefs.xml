@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Custom Carrier Text">
+        <CheckBoxPreference android:title="Use Custom Carrier Text" android:key="custom_lock_carrier" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.prefs.MyEditTextPreference android:title="Carrier Custom Text" android:defaultValue="KING ROM S7 EDGE" android:key="custom_lock_carrier_text" android:summary="Edit carrier label" android:dependency="custom_lock_carrier" android:dialogTitle="Set Custom Text" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Carrier Text" alphaSlider="true" android:defaultValue="-1" android:key="carrier_color" android:summary="Choose carrier color" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Lockscreen Notifications">
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:entries="@array/lockscreen_notif_entries"
+            android:title="Notifications Shown on Lockscreen (Require Restart SystemUI)"
+            android:key="lockscreen_notifications"
+            android:defaultValue="5"
+            android:summary="Number shown on lockscreen"
+            android:entryValues="@array/lockscreen_notif_values" />
+    </PreferenceCategory>
+    <!--<PreferenceCategory android:title="LockScreen Clock">
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color hours" android:key="kg_clock_hours_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="false" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color minutes" android:key="kg_clock_minutes_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="false" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color seconds Hours" android:key="kg_clock_second_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="false" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="The color of the date text" android:key="kg_date_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="false" />
+        <SwitchPreference android:title="Show seconds in hours" android:key="lock_seconds" android:defaultValue="0" android:summaryOn="Show" android:summaryOff="Hide" />
+    </PreferenceCategory>-->
+</PreferenceScreen>
